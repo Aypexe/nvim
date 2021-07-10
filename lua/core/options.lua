@@ -37,7 +37,7 @@ local function load_options()
     history        = 2000;
     shada          = "!,'300,<50,@100,s10,h";
     backupskip     = "/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*,*/shm/*,/private/var/*,.vault.vim";
-    smarttab       = true;
+    smarttab       = false;
     shiftround     = true;
     timeout        = true;
     ttimeout       = true;
@@ -71,7 +71,7 @@ local function load_options()
     foldlevelstart = 99;
     ruler          = false;
     list           = true;
-    showtabline    = 2;
+    showtabline    = 0;
     winwidth       = 30;
     winminwidth    = 10;
     pumheight      = 15;

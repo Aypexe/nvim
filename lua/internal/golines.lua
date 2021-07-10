@@ -52,8 +52,8 @@ local golines_format = function()
   end)
 
   uv.shutdown(stdin, function()
-    uv.close(handle, function()
-    end)
+    --uv.close(handle, function()
+    --end)
   end)
 end
 

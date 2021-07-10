@@ -30,6 +30,7 @@ function autocmd.load_autocmds()
       {"BufWritePre","*.bak","setlocal noundofile"};
       {"BufWritePre","*.tsx","lua vim.api.nvim_command('Format')"};
       {"BufWritePre","*.go","lua require('internal.golines').golines_format()"};
+      {"BufWritePre","*.rs", "lua vim.lsp.buf.formatting_sync(nil, 1000)"}
     };
 
     wins = {

@@ -39,24 +39,21 @@ function config.dashboard()
   }
   vim.g.dashboard_default_executive = 'telescope'
   vim.g.dashboard_custom_section = {
-    last_session = {
-      description = {'  Recently laset session                  SPC s l'},
-      command =  'SessionLoad'},
+    new_file = {
+      description = {'  New File                                SPC f n'},
+      command =  'DashboardNewFile'},
     find_history = {
       description = {'  Recently opened files                   SPC f h'},
       command =  'DashboardFindHistory'},
     find_file  = {
-      description = {'  Find  File                              SPC f f'},
+      description = {'  Find File                               SPC f f'},
       command = 'Telescope find_files find_command=rg,--hidden,--files'},
-    new_file = {
-     description = {'  File Browser                            SPC f b'},
+    file_browser = {
+     description = {'  Browser                                 SPC f b'},
      command =  'Telescope file_browser'},
     find_word = {
-     description = {'  Find  word                              SPC f w'},
+     description = {'  Find word                               SPC f w'},
      command = 'DashboardFindWord'},
-    find_dotfiles = {
-     description = {'  Open Personal dotfiles                  SPC f d'},
-     command = 'Telescope dotfiles path=' .. home ..'/.dotfiles'},
     go_source = {
      description = {'  Find Go Source Code                     SPC f s'},
      command = 'Telescope gosource'},
@@ -97,9 +94,9 @@ function config.gitsigns()
   end
   require('gitsigns').setup {
     signs = {
-      add = {hl = 'GitGutterAdd', text = '▋'},
-      change = {hl = 'GitGutterChange',text= '▋'},
-      delete = {hl= 'GitGutterDelete', text = '▋'},
+      add = {hl = 'GitGutterAdd', text = '▎'},
+      change = {hl = 'GitGutterChange',text= '▎'},
+      delete = {hl= 'GitGutterDelete', text = '▎'},
       topdelete = {hl ='GitGutterDeleteChange',text = '▔'},
       changedelete = {hl = 'GitGutterChange', text = '▎'},
     },
