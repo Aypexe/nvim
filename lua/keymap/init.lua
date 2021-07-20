@@ -4,6 +4,7 @@ local map_cu = bind.map_cu
 local map_cmd = bind.map_cmd
 local map_args = bind.map_args
 require('keymap.config')
+require('keymap.run')
 
 local plug_map = {
     ["i|<TAB>"]      = map_cmd('v:lua.tab_complete()'):with_expr():with_silent(),
